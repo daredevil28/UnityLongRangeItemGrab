@@ -54,13 +54,12 @@ public class LongRangeItemGrab : MonoBehaviour
                     var points = new Vector3[2];
                     points[0] = ray.origin;
                     points[1] = hit.point;
-                    //points[1] = hit.point;
                     line.SetPositions(points);
                 }
 
                 GetClosestGameObject(col, hit.point);
                 
-                //If there is no Interactable set, and the last Interactable was set, make sure to hoverUnlock the last hovered over the Interactable
+                //If there is no Interactable set
                 if (currentItem is null)
                 {
                     hand.HoverUnlock(lastItem);
